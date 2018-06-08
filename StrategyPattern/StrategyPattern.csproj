@@ -40,11 +40,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="TicketSn\ITicketSn.cs" />
+    <Compile Include="TicketSnStrategy\ITicketSnStrategy.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TicketSn\TicketSn.cs" />
-    <Compile Include="TicketSn\TicketSnThirteen.cs" />
-    <Compile Include="TicketSn\TicketSnEleven.cs" />
+    <Compile Include="TicketSnStrategy\TicketSn.cs" />
+    <Compile Include="TicketSnStrategy\TicketSnThirteenStrategy.cs" />
+    <Compile Include="TicketSnStrategy\TicketSnElevenStrategy.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

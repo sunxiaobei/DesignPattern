@@ -10,7 +10,7 @@ using System.Threading.Tasks;
  * **********************/
 namespace StrategyPattern
 {
-    public interface ITicketSn
+    public interface ITicketSnStrategy
     {
         /// <summary>
         /// 自动生成准考证号

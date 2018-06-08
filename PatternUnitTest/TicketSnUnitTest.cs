@@ -21,7 +21,7 @@ namespace PatternUnitTest
         public void TestGetTicketSn()
         {
             //11位
-            TicketSn ticket = new TicketSn(new TicketSnEleven());
+            TicketSn ticket = new TicketSn(new TicketSnElevenStrategy());
             string ticketSn11 =ticket.GetTicketSn(roomNo, seatNo,11, datetime);
             Assert.AreEqual(ticketSn11, "18060301005");
         }
@@ -34,7 +34,7 @@ namespace PatternUnitTest
         {
             TicketSn ticket = new TicketSn(null);
             //13位
-            ticket.changeTicketSn(new TicketSnThirteen());
+            ticket.changeTicketSn(new TicketSnThirteenStrategy());
             string ticketSn13 = ticket.GetTicketSn(roomNo, seatNo, 13, datetime);
             Assert.AreEqual(ticketSn13, "2018060301005");
         }

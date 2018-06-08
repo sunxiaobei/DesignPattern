@@ -10,7 +10,7 @@ using System.Threading.Tasks;
  * **********************/
 namespace StrategyPattern
 {
-    public class TicketSnEleven : ITicketSn
+    public class TicketSnElevenStrategy : ITicketSnStrategy
     {
         /// <summary>
         /// 11位准考证生成:年（后两位)+月(两位）+日（两位）+考场号（3位）+座号（两位）

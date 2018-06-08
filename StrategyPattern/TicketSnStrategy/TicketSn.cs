@@ -13,9 +13,9 @@ namespace StrategyPattern
     public class TicketSn
     {
         // 准考证策略上下文，为客户选择合适的策略
-        private ITicketSn ticketSn = null;
+        private ITicketSnStrategy ticketSn = null;
         //构造函数
-        public TicketSn(ITicketSn ticketSn)
+        public TicketSn(ITicketSnStrategy ticketSn)
         {
             this.ticketSn = ticketSn;
         }
@@ -32,16 +32,16 @@ namespace StrategyPattern
             //默认策略11位
             if (this.ticketSn==null)
             {
-                this.ticketSn = new TicketSnEleven();
+                this.ticketSn = new TicketSnElevenStrategy();
             }
             //如果type=13  十三位准考证；否则 11位准考证
             if (type==13)
             {
-                this.ticketSn = new TicketSnThirteen();
+                this.ticketSn = new TicketSnThirteenStrategy();
             }
             else
             {
-                this.ticketSn = new TicketSnEleven();
+                this.ticketSn = new TicketSnElevenStrategy();
             }
             return this.ticketSn.AutoGenerateTicketSn(roomNo, seatNo, dateTime);
         }
@@ -49,7 +49,7 @@ namespace StrategyPattern
         /// 切换模式
         /// </summary>
         /// <param name="ticketSn"></param>
-        public void changeTicketSn(ITicketSn ticketSn)
+        public void changeTicketSn(ITicketSnStrategy ticketSn)
         {
             this.ticketSn = ticketSn;
         }

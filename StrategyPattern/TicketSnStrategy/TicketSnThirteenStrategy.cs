@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace StrategyPattern
 {
-    public class TicketSnThirteen : ITicketSn
+    public class TicketSnThirteenStrategy : ITicketSnStrategy
     {
         public string AutoGenerateTicketSn(string roomNo, string seatNo, DateTime? dateTime = null)
         {
