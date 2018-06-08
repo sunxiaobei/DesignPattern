@@ -48,6 +48,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DemoSingletonTest.cs" />
     <Compile Include="TicketSnUnitTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -55,6 +56,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\SingletonPattern\SingletonPattern.csproj">
+      <Project>{393ce009-8416-4b31-a7a9-12bc25fad090}</Project>
+      <Name>SingletonPattern</Name>
+    </ProjectReference>
     <ProjectReference Include="..\StrategyPattern\StrategyPattern.csproj">
       <Project>{fa1b90ab-13f8-49c3-9c24-ee118b3f96ea}</Project>
       <Name>StrategyPattern</Name>

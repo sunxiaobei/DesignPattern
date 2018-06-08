@@ -10,6 +10,7 @@ namespace PatternUnitTest
         public static void Init(TestContext testContext)
         {
 
+
         }
 
         string seatNo = "5", roomNo = "10";
