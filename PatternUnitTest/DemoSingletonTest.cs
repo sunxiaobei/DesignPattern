@@ -58,12 +58,51 @@ namespace PatternUnitTest
         // public void MyTestCleanup() { }
         //
         #endregion
-
+        /// <summary>
+        /// 简单单利模式
+        /// </summary>
         [TestMethod]
+       
         public void TestDemoSingletonPattern()
         {
             string msg = DemoSingletonPattern.GetDemoInstance().GetMessage();
             Assert.AreEqual(msg, "DemoSingletonPattern");
+        }
+        /// <summary>
+        /// 改进一：简单线程安全模式
+        /// </summary>
+        [TestMethod]
+        public void TestDemoLockSingletonPattern()
+        {
+            string msg = DemoLockSingletonPattern.GetDemoLockInstance().GetMessage();
+            Assert.AreEqual(msg, "DemoLockSingletonPattern");
+        }
+        /// <summary>
+        /// 双重检验模式-线程安全
+        /// </summary>
+        [TestMethod]
+        public void TestDemoTowLockSingletonPattern()
+        {
+            string msg = DemoTwoLockSingletonPattern.GetDemoTwoLockInstance().GetMessage();
+            Assert.AreEqual(msg, "DemoTwoLockSingletonPattern");
+        }
+        /// <summary>
+        /// 饿汉模式
+        /// </summary>
+        [TestMethod]
+        public void TestDemoHungrySingletonPattern()
+        {
+            string msg = DemoHungrySingletonPattern.GetDemoHungrySingletonInstance().GetMessage();
+            Assert.AreEqual(msg, "DemoHungrySingletonPattern");
+        }
+        /// <summary>
+        /// 内部类模式
+        /// </summary>
+        [TestMethod]
+        public void TestDemoInnerSingletonPattern()
+        {
+            string msg = DemoInnerSingletonPattern.GetInnerSingletonPatternInstance().GetMessage();
+            Assert.AreEqual(msg, "DemoInnerSingletonPattern");
         }
     }
 }
