@@ -5,8 +5,9 @@
 设计模式实例目录及进度
 -----------
 * 1-CreationalPatterns（创建型模式）
->
->
+> - [x] 1.1SingletonPatterns（单利模式）
+>     - [x] 1.1.1 单例模式Demo（懒汉式、饿汉式及其改进）
+>     - [x] 1.1.2 单例模式读取配置文件信息
 * 2-StructuralPatterns（结构型模式）
 >
 >
